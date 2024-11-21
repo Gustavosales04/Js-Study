@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 
 app.get("/", function(req, res){
-    res.sendFile()
+    res.sendFile(__dirname+"/view/index.html");
+    //__dirname(acessa o diretorio da pasta)/pasta/arquivo
 });
 
 app.get("/sobre", function(req, res){
-    res.send("Minha pagina sobre!");
+    res.sendFile(__dirname+"/view/sobre.html");
+    
 });
 
 app.get("/blog", function(req, res){
